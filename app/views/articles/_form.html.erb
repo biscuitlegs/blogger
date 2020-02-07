@@ -16,7 +16,7 @@
 
 <p>
     <% if @article.image.exists? %>
-            <%= image_tag @article.image.url %>
+            <%= image_tag @article.image.url(:medium) %>
         <% end %>
     <%= f.label :image, "Attach a New Image" %>
     <%= f.file_field :image %>
